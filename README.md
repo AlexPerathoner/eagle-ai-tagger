@@ -1,8 +1,9 @@
 [English](README.md) [简体中文](README_zh_CN.md)
 # Eagle AI Tagger (WIP)
 
-A custom plugin for Eagle to generate tags by using [wd-swinv2-tagger-v3](https://huggingface.co/SmilingWolf/wd-swinv2-tagger-v3/)
-![img.png](docs/img.png)
+# Changes from the original repo
+Added a progress bar, and added a button to analyze multiple images at once. Please note that this button doesn't ask for confirmation, and applies all found tags automatically. A `ai-tagger-tagged` tag will be added to the image, too.
+![](docs/img_0.png)
 
 ## Prerequisite
 Make sure you installed
@@ -27,19 +28,22 @@ npm install
 
 ## How to use
 1. select one image
-2. right click -> Plugin -> AI Tagger ![img_2.png](docs/img_2.png)
+2. right click -> Plugin -> AI Tagger
+![img_2.png](docs/img_2.png)
 3. first, click Analyze, then it will take some time (a few seconds) to load AI model, and analyze your image.
-4. if generating successful, you will see the tag list![img_1.png](docs/img_1.png)
+4. if generating successful, you will see the tag list
+![img_1.png](docs/img_1.png)
 5. then you can select what you want (or select all)
 6. click Append Tags
-7. the tags will be added to image now ![img_3.png](docs/img_3.png)
+7. the tags will be added to image now
+![img_3.png](docs/img_3.png)
 
 ## TODO
 * [x] Tag Translation
   * you may notice, I am using [wd-swinv2-tagger-v3](https://huggingface.co/SmilingWolf/wd-swinv2-tagger-v3/), which is popular in the stable diffusion community for generating prompts. While we can use "prompt" as tags in Eagle, it's better to translate them into the user's language. For example, "1girl" could be translated to "一个女孩" and "smile" to "微笑". I may translate the tags to Chinese later, but since the full list has more than 10,000 tags, it will take time. 
 * [ ] i18n support
   * Currently, I have added support for English and Chinese. Please open an issue if you need another language.
-* [ ] Support for Multiple Image Selection
+* [x] Support for Multiple Image Selection
   * At the moment, the tool only supports one image at a time. However, it would be better to support selecting multiple images.
 * [ ] better UI&UX
   * Since I have only implemented the basic functionality so far, I might improve the UI and UX later, such as other themes.

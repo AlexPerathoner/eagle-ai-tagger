@@ -7,6 +7,7 @@
     "main": {
         "button": {
             "analyze": "Analyze",
+            "analyzeAndAppendToMultiple": "Analyze and Append to Multiple",
             "selectAll": "Select All",
             "unselect": "Unselect",
             "appendTags": "Append Tags"
